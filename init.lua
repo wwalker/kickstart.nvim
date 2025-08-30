@@ -265,9 +265,9 @@ require('lazy').setup({
   'pasky/claude.vim',
   'szw/vim-maximizer',
   'junegunn/vim-peekaboo',
-  -- 'dense-analysis/ale',
-  -- 'vim-syntastic/syntastic',
-  -- 'junegunn/gv.vim',
+  -- 'dense-analysis/ale', -- This triggers the "Undefined global `vim`." warnings
+  'vim-syntastic/syntastic',
+  'junegunn/gv.vim',
   'tpope/vim-characterize',
   'tpope/vim-vividchalk',
   'tpope/vim-projectionist',
