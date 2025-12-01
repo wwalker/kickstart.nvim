@@ -262,7 +262,7 @@ require('lazy').setup({
   'subnut/nvim-ghost.nvim',
   'CopilotC-Nvim/CopilotChat.nvim',
   'iamcco/markdown-preview.nvim',
-  'pasky/claude.vim',
+  'NickvanDyke/opencode.nvim',
   'szw/vim-maximizer',
   'junegunn/vim-peekaboo',
   -- 'dense-analysis/ale', -- This triggers the "Undefined global `vim`." warnings
@@ -1153,7 +1153,8 @@ require('lazy').setup({
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
-}, {
+}
+, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -1174,6 +1175,18 @@ require('lazy').setup({
     },
   },
 })
+require("CopilotChat").setup {
+  debug = false,          -- Disable debug mode by default (set to true if you need logs)
+  window = {
+  layout = 'vertical',    -- Split to the right
+  width = 0.5,            -- 50% of the screen width
+  },
+  mappings = {
+  complete = '<F12>',   -- Press Tab to accept completion suggestions
+  close = '<C-c>',      -- Press Ctrl+C to close the chat window
+  submit = '<C-s>',     -- Press Ctrl+S to submit your prompt
+  },
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
