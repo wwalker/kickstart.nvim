@@ -247,6 +247,8 @@ rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+  -- 2025-12-01_12.21.52
+  'mnpk/vim-jira-complete',
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   --  2025-08-08_17.37.54,
@@ -1153,8 +1155,7 @@ require('lazy').setup({
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
-}
-, {
+}, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -1175,16 +1176,16 @@ require('lazy').setup({
     },
   },
 })
-require("CopilotChat").setup {
-  debug = false,          -- Disable debug mode by default (set to true if you need logs)
+require('CopilotChat').setup {
+  debug = false, -- Disable debug mode by default (set to true if you need logs)
   window = {
-  layout = 'vertical',    -- Split to the right
-  width = 0.5,            -- 50% of the screen width
+    layout = 'vertical', -- Split to the right
+    width = 0.5, -- 50% of the screen width
   },
   mappings = {
-  complete = '<F12>',   -- Press Tab to accept completion suggestions
-  close = '<C-c>',      -- Press Ctrl+C to close the chat window
-  submit = '<C-s>',     -- Press Ctrl+S to submit your prompt
+    complete = '<F12>', -- Press Tab to accept completion suggestions
+    close = '<C-c>', -- Press Ctrl+C to close the chat window
+    submit = '<C-s>', -- Press Ctrl+S to submit your prompt
   },
 }
 
